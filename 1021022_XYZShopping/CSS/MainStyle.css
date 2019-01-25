@@ -1,0 +1,57 @@
+﻿body
+{
+    font-family:Arial;
+    font-size:10pt;
+    color:blue;
+    background-image:url(Pic.jpg);
+     background-color: rgba(248, 247, 216, 0.7);
+}
+
+.myBanner,h1
+{
+    font-family:Tahoma;
+    font-size:20pt;
+    text-align:center;
+    color:blue;  /* dark red */
+    background-color:darkgray
+}
+h4{
+    font-family:Tahoma;
+    font-size:13pt;
+    font-weight:400;
+
+}
+
+.myHeading
+{
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:12pt;
+    text-align:left;
+    color:#c00000;  /* dark red */
+}
+
+.mainButton
+{
+    color:white;
+    background-color:#c00000;
+    font-size:10pt;
+}
+
+.para1
+{
+    font-size:12pt;
+    color:#00c000;
+}
+
+yle
+{
+    border : 1px solid red;
+    background-color : #fffff0;
+}
+#Footer
+{
+    position: absolute;
+    bottom: 5px;
+    
+}

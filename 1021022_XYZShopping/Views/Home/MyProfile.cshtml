@@ -1,0 +1,49 @@
+﻿@model IEnumerable<_1021022_XYZShopping.Models.ProfileDataModel>
+
+@{
+    ViewBag.Title = "MyProfile";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>MyProfile</title>
+
+</head>
+
+<body>
+    <div style="margin:0 auto; text-align: center; width:400px;color:blue;">
+        @foreach (var item in Model)
+        {
+            <u>  @Html.LabelFor(model => item.UserID)</u>
+            <span>@item.UserID</span><br /><br />
+            <u> @Html.LabelFor(model => item.FirstName)</u>
+            <span>@item.FirstName</span><br /><br />
+            <u>   @Html.LabelFor(model => item.LastName)</u>
+            <span>@item.LastName</span><br /><br />
+            <u> @Html.LabelFor(model => item.Address)</u>
+            <span>@item.Address</span><br /><br />
+            <u> @Html.LabelFor(model => item.CCNumber)</u>
+            <span>@item.CCNumber</span><br /><br />
+            <u> @Html.LabelFor(model => item.Email)</u>
+            <span>@item.Email</span><br /><br />
+
+        }
+
+        @ViewBag.Message
+
+    </div>
+    @Html.ActionLink("Menu", "Menu")
+
+</body>
+
+</html>
+
+
+

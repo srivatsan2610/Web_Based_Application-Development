@@ -1,0 +1,26 @@
+﻿@model _1021022_XYZShopping.Models.ShoppingCartModel
+@{
+    ViewBag.Title = "Success";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Success</title>
+
+</head>
+
+<body style="color:white;">
+    <p> Hi @Model.Email_Id !!</p><br />
+    <p>Successfully Logged In..</p><br />
+    @Html.ActionLink("Menu", "Menu")
+
+</body>
+
+</html>

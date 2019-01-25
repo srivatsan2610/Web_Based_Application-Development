@@ -1,0 +1,62 @@
+﻿    @model _1021022_XYZShopping.Models.ProductsModel
+
+@{
+    ViewBag.Title = "Products";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="~/scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/scripts/jquery-ui-1.9.2.min.js"></script>
+    <link href="~/scripts/jtable/themes/metro/lightgray/jtable.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/scripts/jtable/jquery.jtable.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    @Html.ActionLink("Menu", "Menu")
+    <div id="ProductsTableContainer"></div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#ProductsTableContainer').jtable({
+                title: 'Products',
+                paging: true,
+               actions: {
+                    listAction: '@Url.Action("Products")'
+                },
+                fields: {
+                    'productId': {
+                        title: 'productId',
+                        key: true
+                    },
+                    'CatID': {
+                        title: 'CatID'
+                    },
+                    'ProductSDesc': {
+                        title: 'ProductSDesc'
+                    },
+                    'ProductLDesc': {
+                        title: 'ProductLDesc'
+                    },
+                    'Price': {
+                        title: 'Price'
+                    },
+                    'Instock': {
+                        title: 'Instock'
+                    },
+                    'Inventory': {
+                        title: 'Inventory'
+                    }
+                }
+            });
+            $('#ProductsTableContainer').jtable('load');
+        });
+    </script>
+</body>
+</html>
+

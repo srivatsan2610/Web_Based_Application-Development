@@ -1,0 +1,41 @@
+﻿@model _1021022_XYZShopping.Models.ShoppingCartModel
+
+@{
+    ViewBag.Title = "Feedback";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>FeedBack</title>
+</head>
+
+<body>
+    @Html.ActionLink("Menu", "Menu")<br /><br />
+    @ViewBag.Message
+    <div style="color:cadetblue">
+        @using (Html.BeginForm())
+
+        {
+            <strong> @Html.LabelFor(m => m.feedback)</strong><br /><br />
+            <div style="color:black"> @Html.TextAreaFor(m => m.feedback, 10, 40, null)</div><br /><br />
+
+            <input type="submit" value="Submit" /><br /><br />
+
+
+
+
+        }
+
+
+
+    </div>
+
+</body>
+</html>
+
+
+

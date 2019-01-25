@@ -1,0 +1,63 @@
+﻿@model _1021022_XYZShopping.Models.OrderDetailsModel
+
+@{
+    ViewBag.Title = "OrderDetails";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="~/scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/scripts/jquery-ui-1.9.2.min.js"></script>
+    <link href="~/scripts/jtable/themes/metro/lightgray/jtable.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/scripts/jtable/jquery.jtable.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    @Html.ActionLink("Menu", "Menu")
+    <div style="color:white">
+        @{
+            @ViewBag.Message
+        }
+    </div>
+    <div id="OrderTableContainer"></div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#OrderTableContainer').jtable({
+                title: 'Order Details',
+                paging: true,
+               actions: {
+                    listAction: '@Url.Action("OrderDetails")'
+                },
+                fields: {
+                    'OrderDetailID': {
+                        title: 'OrderDetailID',
+                        key: true
+                    },
+                    'OrderNo': {
+                        title: 'OrderNo'
+                    },
+                    'ItemNo': {
+                        title: 'ItemNo'
+                    },
+                    'ItemDesc': {
+                        title: 'ItemDesc'
+                    },
+                    'Qty': {
+                        title: 'Qty'
+                    },
+                    'Price': {
+                        title: 'Price'
+                    }
+                }
+            });
+            $('#OrderTableContainer').jtable('load');
+        });
+    </script>
+</body>
+</html>
